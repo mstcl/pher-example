@@ -6,6 +6,7 @@ authorEmail: someone@example.org
 authorUrl: "https://github.org/mstcl/pher"
 rootCrumb: "~"
 codeHighlight: true
+path: "/pher-example"
 footer:
   - text: "cc by-nd 4.0"
     href: "https://creativecommons.org/licenses/by-nd/4.0/"
