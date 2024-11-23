@@ -20,7 +20,6 @@ jobs:
       - run: pher -i src -c src/config.yaml -o _site
 
       - name: Upload static files as artifact
-        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
