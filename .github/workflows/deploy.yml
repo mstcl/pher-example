@@ -16,7 +16,7 @@ jobs:
         with:
           go-version: "^1.23.2" # The Go version to download (if necessary) and use.
 
-      - run: go install github.com/mstcl/pher/v2
+      - run: go install github.com/mstcl/pher/v2@v2.1.1
       - run: pher -i src -c src/config.yaml -o _site
 
       - name: Upload static files as artifact
