@@ -1,0 +1,26 @@
+name: deploy
+
+on:
+  push:
+    branch:
+      - "master"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "^1.23.2" # The Go version to download (if necessary) and use.
+
+      - run: go install github.com/mstcl/pher/v2
+      - run: pher -i src -c src/config.yaml -o _site
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/

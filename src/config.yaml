@@ -1,0 +1,13 @@
+title: pher
+description: tiny wiki ssg
+url: "https://github.com/mstcl/pher"
+authorName: mstcl
+authorEmail: someone@example.org
+authorUrl: "https://github.org/mstcl/pher"
+rootCrumb: "~"
+codeHighlight: true
+footer:
+  - text: "cc by-nd 4.0"
+    href: "https://creativecommons.org/licenses/by-nd/4.0/"
+  - text: "feed"
+    href: "/feed.xml"
