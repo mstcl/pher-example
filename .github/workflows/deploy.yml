@@ -1,29 +1,45 @@
 name: deploy
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branch:
-      - "master"
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - uses: actions/setup-go@v5
         with:
           go-version: "^1.23.2" # The Go version to download (if necessary) and use.
-
       - run: go install github.com/mstcl/pher/v2@v2.1.1
       - run: pher -i src -c src/config.yaml -o _site
-
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
