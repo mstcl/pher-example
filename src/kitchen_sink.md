@@ -3,6 +3,8 @@ title: this is a markdown kitchen sink
 description: it is also pinned at the top
 pinned: true
 showHeader: true
+date: 2024-10-24
+toc: true
 tags:
   - kitchen-sink
   - demo
@@ -76,30 +78,30 @@ This is a table:
 | ok           | good `oreos`      | hmm   |
 | ok           | good `zoute` drop | yumm  |
 
-### There's a horizontal rule below this.
+## Horizontal rule
 
 ______________________________________________________________________
 
-### Here is an unordered list:
+## Here is an unordered list
 
 - Item foo
 - Item bar
 - Item baz
 - Item zip
 
-### And an ordered list:
+## And an ordered list
 
 1. Item one
 1. Item two
 1. Item three
 1. Item four
 
-### And an ordered list, continued:
+## And an ordered list, continued
 
 1. Item one
 1. Item two
 
-### And a nested list:
+## And a nested list
 
 - level 1 item
   - level 2 item
@@ -115,7 +117,7 @@ ______________________________________________________________________
   - level 2 item
 - level 1 item
 
-### And a task list
+## And a task list
 
 - [ ] Hello, this is a TODO item
 - [ ] Hello, this is another TODO item
@@ -128,7 +130,7 @@ ______________________________________________________________________
   - [ ] level 2 item (task)
   - [ ] level 2 item (task)
 
-### A gigantic image
+## A gigantic image
 
 ![](./assets/midsummer.png)
 
@@ -136,7 +138,7 @@ Just use HTML to rescale it
 
 <img src="./assets/midsummer.png" width="200">
 
-### Definition lists can be used with HTML syntax.
+## Definition lists can be used with HTML syntax
 
 <dl>
 <dt>Name</dt>
@@ -149,7 +151,7 @@ Just use HTML to rescale it
 <dd>Green</dd>
 </dl>
 
-### More code
+## More code
 
 ```go
 package main
@@ -187,7 +189,7 @@ func main() {
 
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 
-### Collapsed Section
+## Collapsed Section
 
 The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
 

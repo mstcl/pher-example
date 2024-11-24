@@ -3,7 +3,6 @@ title: pher
 description: tiny wiki ssg
 showHeader: true
 layout: list
-toc: true
 tags:
   - demo
 date: 2024-11-23
