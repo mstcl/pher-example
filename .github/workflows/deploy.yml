@@ -34,7 +34,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "^1.23.2" # The Go version to download (if necessary) and use.
-      - run: GOPROXY=direct go install github.com/mstcl/pher/v3@3.0.1
+      - run: GOPROXY=direct go install github.com/mstcl/pher/v3@v3.0.1
       - run: pher -i src -c src/config.yaml -o _site
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
